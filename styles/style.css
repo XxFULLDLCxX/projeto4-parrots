@@ -107,6 +107,7 @@ body {
     display: flex;
     flex-wrap: wrap-reverse;
     gap: 34px;
+    user-select: none;
 }
 
 .card {
@@ -134,6 +135,7 @@ body {
 .face img {
     width: 100px;
     height: 100px;
+    pointer-events: none;
 }
 
 .front-face {

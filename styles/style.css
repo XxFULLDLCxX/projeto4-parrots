@@ -1,0 +1,191 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #EEF9BF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* X Utilities - Aqui estão as classes utilitárias para css. */
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.y-center {
+    display: flex;
+    align-items: center;
+}
+
+.x-center {
+    display: flex;
+    justify-content: center;
+}
+
+.inflexible {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Os estilos adicionais estão dispostos abaixo, em ordem de estruturação do HTML. */
+
+.container {
+    min-width: 350px;
+}
+
+
+.content {
+    max-width: 1000px;
+    margin: 0px auto 34px;
+}
+
+.header {
+    position: relative;
+}
+
+.header h1 {
+    color: #75B79E;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+    text-align: center;
+    padding: 0 60px;
+    margin-bottom: 25px;
+}
+
+.switch {
+    position: absolute;
+    background-color: #75B79E;
+    width: 35px;
+    height: 35px;
+}
+
+.switch.on::after {
+    content: "on";
+}
+
+.switch.off::after {
+    content: "off";
+}
+
+.header .timer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 46px;
+}
+
+.header .timer>div {
+    position: fixed;
+}
+
+.header .timer-content {
+    position: absolute;
+    right: 0px;
+    margin: 16px 8px 0px 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: -0.004em;
+
+    color: #86BD8D;
+
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 34px;
+}
+
+.card {
+    width: 117px;
+    height: 146px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #A7E9AF;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+
+.face img {
+    width: 100px;
+    height: 100px;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.card.pressed .back-face {
+    transform: rotateY(-180deg);
+}
+
+.card.pressed .front-face {
+    transform: rotateY(0deg);
+}
+
+/* 
+.front-face {
+    background-color: #A7E9AF;
+    transform: rotateY(0deg);
+}
+
+.back-face {
+    background-color: red;
+    transform: rotateY(180deg);
+}
+
+.card:hover .front-face {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .back-face {
+    transform: rotateY(0deg); 
+} */
+
+/* 
+.card[x-state="back"] .back-face {
+    transform: rotateY(0deg); 
+    z-index: 1;
+    background-color: red;
+}
+
+.card[x-state="front"] .front-face {
+    transform: rotateY(-180deg); 
+    z-index: 1;
+    background-color: skyblue;
+} */
+@media only screen and (max-width: 335px) {
+    .header h1 {
+        font-size: 36px;
+        font-weight: 700;
+
+        line-height: 42px;
+        letter-spacing: -0.004em;
+        text-align: center;
+    }
+}

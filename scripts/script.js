@@ -11,13 +11,13 @@ let timer_count = 0;
 let num_cards;
 let images = [];
 
-const num_cards_message = "Quantas cartas quer jogar? (números pares entre 4 à 14) ";
+const num_cards_message = "Quantas cartas quer jogar? (números pares entre 4 a 14)";
 const play_again_message = "Você gostaria de reiniciar a partida? (sim ou não)";
 
 const generate_card = () => {
-    `Conceitos de Recursividade`;
+    //Conceito de Recursividade;
     num_cards = Number(prompt(num_cards_message));
-    //if (isNaN(num_cards) && num_cards !== null && num_cards % 2 === 0 && num_cards >= 4 && num_cards <= 14) 
+
     if (isNaN(num_cards) || num_cards === null || num_cards % 2 !== 0 || num_cards < 4 || num_cards > 14) {
         generate_card();
     } else {
@@ -25,7 +25,7 @@ const generate_card = () => {
             'metalparrot.gif', 'fiestaparrot.gif', 'bobrossparrot.gif', 'explodyparrot.gif',
             'unicornparrot.gif', 'revertitparrot.gif', 'tripletsparrot.gif',
         ].sort(() => { return (Math.random() - 0.5); }).slice(0, num_cards / 2);
-        
+
         for (let i = 0; i < sliced_random_images.length; i++) {
             images.push(sliced_random_images[i]);
             images.push(sliced_random_images[i]);
@@ -40,9 +40,8 @@ const generate_card = () => {
 
 generate_card();
 
-
 const start_timer = () => {
-    `Conceitos de Recursividade`;
+    // Conceitos de Recursividade;
     if (timer_running) {
         timer_count++;
         if (timer_count < 10) {
@@ -55,6 +54,7 @@ const start_timer = () => {
 };
 
 const play_again = () => {
+    // Conceitos de Recursividade;
     let play_again_response = prompt(play_again_message);
 
     if (play_again_response !== "sim") {
@@ -72,11 +72,11 @@ const play_again = () => {
 };
 
 function getCard(card_press) {
-    `
+    /*
     O getCard é chamado, sempre que um card é pressionado.
     ... Descrição do Fluxo de Execução (Análise do Metódo).
     Comece o Timer se ele não estiver rodando.
-    Casos de Desconsideração de Click: 
+    Casos de Desconsideração de Click:
         Se o card a ser pressionado já foi pressionado.
         Se a sessão de cards está bloqueada (a animação está acontencendo).
     Atualiza o Contador de Jogadas.
@@ -92,7 +92,7 @@ function getCard(card_press) {
         Reset o Timer
         Reset o Contandor de Jogadas.
         Chame a Função Responsável por Começar o Jogo.
-    `;
+    */;
     if (!timer_running) {
         timer_running = true;
         start_timer();

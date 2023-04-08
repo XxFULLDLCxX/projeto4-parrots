@@ -21,9 +21,6 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="inflexible">
-                <div class="switch center off" onclick="switchBtn(this)"></div>
-            </div>
             <h1>PARROT CARD GAME</h1>
             <div class="timer inflexible">
                 <div>
@@ -32,8 +29,8 @@
             </div>
         </div>
         <div class="content">
-            <div class="cards hidden x-center">
-                <div class-test="card" x-state="back" class="card inflexible" onclick="getCard(this)">
+            <div class="cards x-center">
+                <div data-test="card" x-state="back" class="card  hidden inflexible" onclick="getCard(this)">
                     <div class="front-face face">
                         <img data-test="face-up-image" src="./assets/back.png" alt="">
                     </div>

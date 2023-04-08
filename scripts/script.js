@@ -1,7 +1,7 @@
 const cards = document.querySelector('.cards');
 const card = document.querySelector('.card');
 cards.innerHTML = "";
-cards.classList.remove('hidden');
+card.classList.remove('hidden');
 
 const timer_content = document.querySelector('.timer-content');
 

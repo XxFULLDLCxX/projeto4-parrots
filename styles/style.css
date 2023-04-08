@@ -43,6 +43,7 @@ body {
 .content {
     max-width: 1000px;
     margin: 0px auto 34px;
+    padding: 0 8px;
 }
 
 .header {
@@ -50,6 +51,7 @@ body {
 }
 
 .header h1 {
+    margin: auto;
     color: #75B79E;
     font-style: normal;
     font-weight: 700;
@@ -133,13 +135,35 @@ body {
     transform: rotateY(0deg);
 }
 
-@media only screen and (max-width: 335px) {
+@media only screen and (max-width: 435px) {
+    .content {
+        padding: 0px 34px;
+    }
     .header h1 {
-        font-size: 36px;
-        font-weight: 700;
+        font-size: 46px;
+        line-height: 54px;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+    .header .timer-content {
+        margin-top: 8px;
+        top: 100px;
+    }
+}
 
+@media only screen and (max-width: 335px) {
+    .container {
+        min-width: 235px;
+    }
+    .header h1 {
+        font-weight: 700;
+        font-size: 36px;
         line-height: 42px;
         letter-spacing: -0.004em;
         text-align: center;
+        margin-bottom: 25px;
+    }
+    .header .timer-content {
+        top: 80px;
     }
 }

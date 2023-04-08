@@ -65,7 +65,7 @@ const play_again = () => {
         cards.innerHTML = '';
         cards_pressed = 0;
         timer_count = 0;
-        timer_content.textContent = 0;
+        timer_content.textContent = '00';
         images = [];
         generate_card();
     }

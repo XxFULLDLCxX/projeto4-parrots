@@ -12,7 +12,7 @@ let num_cards;
 let images = [];
 
 const num_cards_message = "Quantas cartas quer jogar? (números pares entre 4 à 14) ";
-const play_again_message = "";
+const play_again_message = "Você gostaria de reiniciar a partida? (sim ou não)";
 
 const generate_card = () => {
     `Conceitos de Recursividade`;
